@@ -123,12 +123,12 @@ if (useAppConfig)
         .ConfigureRefresh(refresh =>
         {
             // Default cache expiration is 30 seconds
-            refresh.Register("eShopWeb:Settings:NoResultsMessage").SetCacheExpiration(TimeSpan.FromSeconds(10));
+            refresh.Register("eShopWeb:Settings:NoResultsMessage").SetCacheExpiration(TimeSpan.FromSeconds(30));
         })
         .UseFeatureFlags(featureFlagOptions =>
         {
             // Default cache expiration is 30 seconds
-            featureFlagOptions.CacheExpirationInterval = TimeSpan.FromSeconds(10);
+            featureFlagOptions.CacheExpirationInterval = TimeSpan.FromSeconds(30);
         });
     });
 }
